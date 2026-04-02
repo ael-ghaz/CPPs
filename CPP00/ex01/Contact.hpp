@@ -6,7 +6,7 @@
 /*   By: eganas <eganas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 14:24:23 by eganas            #+#    #+#             */
-/*   Updated: 2026/04/01 18:15:06 by eganas           ###   ########.fr       */
+/*   Updated: 2026/04/01 21:52:26 by eganas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
 class Contact
 {
 private:
-    std::string name;
+    std::string firstname;
+    std::string lastname;
     std::string nickname;
     std::string phnumber;
     std::string secret;
@@ -28,11 +29,13 @@ public:
     Contact();
     ~Contact();
 
-    std::string getName();
+    std::string getFirstName();
+    std::string getLastName();
     std::string getNickName();
     std::string getPhNumber();
     std::string getSecret();
-    void setName(std::string name);
+    void setFirstName(std::string firstname);
+    void setLastName(std::string lastname);
     void setNickName(std::string nickname);
     void setPhNumber(std::string phnumber);
     void setSecret(std::string secret);

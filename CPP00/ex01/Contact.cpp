@@ -6,7 +6,7 @@
 /*   By: eganas <eganas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 14:24:26 by eganas            #+#    #+#             */
-/*   Updated: 2026/04/01 18:19:34 by eganas           ###   ########.fr       */
+/*   Updated: 2026/04/01 21:53:34 by eganas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,14 @@
 Contact::Contact() {}
 Contact::~Contact() {}
 
-std::string Contact::getName()
+std::string Contact::getFirstName()
 {
-    return this->name;
+    return this->firstname;
+}
+
+std::string Contact::getLastName()
+{
+    return this->lastname;
 }
 
 std::string Contact::getNickName()
@@ -35,9 +40,14 @@ std::string Contact::getSecret()
     return this->secret;
 }
 
-void Contact::setName(std::string name)
+void Contact::setFirstName(std::string firstname)
 {
-    this->name = name;
+    this->firstname = firstname;
+}
+
+void Contact::setLastName(std::string lastname)
+{
+    this->lastname = lastname;
 }
 
 void Contact::setNickName(std::string nickname)

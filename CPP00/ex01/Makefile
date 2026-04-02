@@ -6,16 +6,16 @@
 #    By: eganas <eganas@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/13 15:55:45 by eganas            #+#    #+#              #
-#    Updated: 2025/11/13 16:57:13 by eganas           ###   ########.fr        #
+#    Updated: 2026/04/01 22:40:16 by eganas           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++ -g
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-NAME = megaphone
+NAME = phonebook
 REMOVE = rm -rf
 
-SRC1 = main.cpp
+SRC1 = main.cpp Contact.cpp PhoneBook.cpp
 
 OBJ = $(SRC1:.cpp=.o)
 
