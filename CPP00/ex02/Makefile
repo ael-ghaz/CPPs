@@ -6,16 +6,16 @@
 #    By: eganas <eganas@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/13 15:55:45 by eganas            #+#    #+#              #
-#    Updated: 2026/03/23 18:22:16 by eganas           ###   ########.fr        #
+#    Updated: 2026/04/04 20:32:41 by eganas           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++ -g
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-NAME = megaphone
+NAME = account
 REMOVE = rm -rf
 
-SRC1 = megaphone.cpp
+SRC1 = tests.cpp Account.cpp
 
 OBJ = $(SRC1:.cpp=.o)
 
