@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eganas <eganas@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ael-ghaz <ael-ghaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 14:23:34 by eganas            #+#    #+#             */
-/*   Updated: 2026/04/02 05:23:46 by eganas           ###   ########.fr       */
+/*   Updated: 2026/04/08 13:40:20 by ael-ghaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,22 +18,67 @@ PhoneBook::~PhoneBook() {}
 
 void PhoneBook::addContact()
 {
-    std::string firstname;
-    std::string lastname;
-    std::string nickname;
-    std::string phnumber;
-    std::string secret;
+    std::string firstname = "";
+    std::string lastname = "";
+    std::string nickname = "";
+    std::string phnumber = "";
+    std::string secret = "";
 
-    std::cout << "FirstName: " << std::endl;
-    std::getline(std::cin, firstname);
-    std::cout << "LastName: " << std::endl;
-    std::getline(std::cin, lastname);
-    std::cout << "NickName: " << std::endl;
-    std::getline(std::cin, nickname);
-    std::cout << "PhoneNumber: " << std::endl;
-    std::getline(std::cin, phnumber);
-    std::cout << "Dark Secret: " << std::endl;
-    std::getline(std::cin, secret);
+	while (true)
+	{
+		std::cout << "FirstName: " << std::endl;
+		std::getline(std::cin, firstname);
+		if (firstname.empty())
+		{
+			std::cout << "Error: Empty not allowed" << std::endl;
+			continue;
+		}
+		break;
+	}
+	while (true)
+	{
+		std::cout << "LastName: " << std::endl;
+		std::getline(std::cin, lastname);
+		if (lastname.empty())
+		{
+			std::cout << "Error: Empty not allowed" << std::endl;
+			continue;
+		}
+		break;
+	}
+	while (true)
+	{
+		std::cout << "NickName: " << std::endl;
+		std::getline(std::cin, nickname);
+		if (nickname.empty())
+		{
+			std::cout << "Error: Empty not allowed" << std::endl;
+			continue;
+		}
+		break;
+	}
+	while (true)
+	{
+		std::cout << "PhoneNumber: " << std::endl;
+		std::getline(std::cin, phnumber);
+		if (phnumber.empty())
+		{
+			std::cout << "Error: Empty not allowed" << std::endl;
+			continue;
+		}
+		break;
+	}
+	while (true)
+	{
+		std::cout << "Dark Secret: " << std::endl;
+		std::getline(std::cin, secret);
+		if (secret.empty())
+		{
+			std::cout << "Error: Empty not allowed" << std::endl;
+			continue;
+		}
+		break;
+	}
     if (firstname.empty() || lastname.empty() || nickname.empty() || phnumber.empty() || secret.empty())
         return;
     if (this->cindex == 8)
@@ -104,4 +149,5 @@ void PhoneBook::searchContact()
     std::cout << "NickName: " << this->array[index].getNickName() << std::endl;
     std::cout << "PhoneNumber: " << this->array[index].getPhNumber() << std::endl;
     std::cout << "Dark Secret: " << this->array[index].getSecret() << std::endl;
+	std::cin.ignore(10000, '\n');
 }

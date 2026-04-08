@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eganas <eganas@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ael-ghaz <ael-ghaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 16:57:10 by eganas            #+#    #+#             */
-/*   Updated: 2026/04/02 04:53:04 by eganas           ###   ########.fr       */
+/*   Updated: 2026/04/08 13:42:46 by ael-ghaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,23 +21,29 @@ int main()
 
     while (1)
     {
+		std::cout << std::endl << "Choose your command: \'ADD\', \'SEARCH\' or \'EXIT\'" << std::endl;
         std::getline(std::cin, str);
         if (str == "ADD")
         {
-            std::cout << str << " A CONTACT" << std::endl;
+            std::cout << std::endl << str << " A CONTACT INFORMATIONS" << std::endl;
+			std::cout << "------------------------------" << std::endl;
             PhoneBook.addContact();
             std::cout << "CONTACT ADDED" << std::endl;
         }
-        if (str == "SEARCH")
+        else if (str == "SEARCH")
         {
-            std::cout << str << " A CONTACT" << std::endl;
+            std::cout << std::endl << str << " A CONTACT" << std::endl;
+			std::cout << "------------------------------" << std::endl;
             PhoneBook.searchContact();
+			continue;
         }
-        if (str == "EXIT")
+        else if (str == "EXIT")
         {
-            std::cout << str << " THE PHONEBOOK" << std::endl;
+            std::cout << std::endl << str << " THE PHONEBOOK" << std::endl;
             break;
         }
+		else
+			std::cout << "Usage: Write \'ADD\', \'SEARCH\' or \'EXIT\'" << std::endl;
     }
     return (1);
 }
