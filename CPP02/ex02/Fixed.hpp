@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-ghaz <ael-ghaz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: eganas <eganas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/07 17:48:12 by eganas            #+#    #+#             */
-/*   Updated: 2026/04/09 15:58:35 by ael-ghaz         ###   ########.fr       */
+/*   Updated: 2026/04/10 15:12:31 by eganas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,11 @@ public:
 	Fixed &operator--();
 	Fixed operator--(int n);
 	~Fixed();
+
+	static Fixed &min(Fixed &fixed1, Fixed &fixed2);
+	static Fixed const &min(Fixed const &fixed1, Fixed const &fixed2);
+	static Fixed &max(Fixed &fixed1, Fixed &fixed2);
+	static Fixed const &max(Fixed const &fixed1, Fixed const &fixed2);
 
 	int getRawBits( void ) const;
 	void setRawBits( int const raw );
