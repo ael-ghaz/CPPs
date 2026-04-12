@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eganas <eganas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/05 12:38:20 by eganas            #+#    #+#             */
-/*   Updated: 2026/04/13 01:49:38 by eganas           ###   ########.fr       */
+/*   Created: 2026/04/13 01:06:35 by eganas            #+#    #+#             */
+/*   Updated: 2026/04/13 01:16:04 by eganas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "ClapTrap.hpp"
 
-int main( void ) {
-	ClapTrap ct("CB12");
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
 
-	ct.attack("ESP27");
-	ct.attack("ESP27");
-	ct.attack("ESP27");
-	ct.attack("ESP27");
-	ct.attack("ESP27");
-	ct.attack("ESP27");
-	ct.attack("ESP27");
-	ct.attack("ESP27");
-	ct.attack("ESP27");
-	ct.attack("ESP27");
-	ct.attack("ESP27");
-	ct.takeDamage(3);
-	ct.beRepaired(2);
+class FragTrap : public ClapTrap
+{
+public:
+	FragTrap();
+	FragTrap(std::string name);
+	FragTrap(FragTrap const &ft);
+	FragTrap &operator=(FragTrap const &ft);
+	~FragTrap();
 
-	ct.takeDamage(9);
-	ct.beRepaired(2);
-	ct.attack("ESP27");
-	return 0;
-}
+	void highFivesGuys(void);
+
+};
+
+#endif

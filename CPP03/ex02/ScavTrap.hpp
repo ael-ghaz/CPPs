@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eganas <eganas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/05 12:38:20 by eganas            #+#    #+#             */
-/*   Updated: 2026/04/13 01:49:38 by eganas           ###   ########.fr       */
+/*   Created: 2026/04/10 19:30:35 by eganas            #+#    #+#             */
+/*   Updated: 2026/04/12 21:16:17 by eganas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef SCAVTRAP_HPP
+#define SCAVTRAP_HPP
 
 #include <iostream>
 #include "ClapTrap.hpp"
 
-int main( void ) {
-	ClapTrap ct("CB12");
+class ScavTrap : public ClapTrap
+{
+public:
+	ScavTrap();
+	ScavTrap(std::string name);
+	ScavTrap(ScavTrap const &st);
+	ScavTrap &operator=(ScavTrap const &st);
+	~ScavTrap();
 
-	ct.attack("ESP27");
-	ct.attack("ESP27");
-	ct.attack("ESP27");
-	ct.attack("ESP27");
-	ct.attack("ESP27");
-	ct.attack("ESP27");
-	ct.attack("ESP27");
-	ct.attack("ESP27");
-	ct.attack("ESP27");
-	ct.attack("ESP27");
-	ct.attack("ESP27");
-	ct.takeDamage(3);
-	ct.beRepaired(2);
+	void attack(const std::string& target);
+	void guardGate();
+};
 
-	ct.takeDamage(9);
-	ct.beRepaired(2);
-	ct.attack("ESP27");
-	return 0;
-}
+#endif

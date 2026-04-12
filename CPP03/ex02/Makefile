@@ -6,7 +6,7 @@
 #    By: eganas <eganas@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/13 15:55:45 by eganas            #+#    #+#              #
-#    Updated: 2026/04/10 19:24:19 by eganas           ###   ########.fr        #
+#    Updated: 2026/04/13 01:12:56 by eganas           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = claptrap
 REMOVE = rm -rf
 
-SRC1 = main.cpp ClapTrap.cpp
+SRC1 = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
 OBJ = $(SRC1:.cpp=.o)
 
