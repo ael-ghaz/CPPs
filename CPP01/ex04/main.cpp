@@ -6,7 +6,7 @@
 /*   By: eganas <eganas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/05 12:38:20 by eganas            #+#    #+#             */
-/*   Updated: 2026/04/06 20:11:32 by eganas           ###   ########.fr       */
+/*   Updated: 2026/04/14 12:56:36 by eganas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,15 @@
 
 void replace(std::string &line, std::string occ1, std::string occ2)
 {
-    size_t i = 0;
+	size_t i = 0;
 
     while (true)
     {
-        i = line.find(occ1);
+        i = line.find(occ1, i);
         if (i == std::string::npos)
             break;
         line = line.substr(0, i) + occ2 + line.substr(i + occ1.length(), std::string::npos);
+		i += occ2.length();
     }
 }
 
@@ -34,7 +35,11 @@ int main(int argc, char **argv)
     std::string occ1 = argv[2];
     std::string occ2 = argv[3];
     std::string output = input + ".replace";
-    
+	if (occ1.empty())
+	{
+		std::cout << "Error: Empty not allowed" << std::endl;
+		return 0;
+	}
     std::ifstream ifs(input.c_str());
     if (ifs.fail())
         return (std::cout << "Error: Infile can't be opened" << std::endl, 1);
