@@ -6,7 +6,7 @@
 /*   By: eganas <eganas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/05 12:38:17 by eganas            #+#    #+#             */
-/*   Updated: 2026/04/05 14:15:11 by eganas           ###   ########.fr       */
+/*   Updated: 2026/04/14 11:52:14 by eganas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Zombie::Zombie()
 {
-    std::cout << "Zombie " << this->name << " created" << std::endl;
+    std::cout << "Zombie created" << std::endl;
 }
 Zombie::~Zombie()
 {
