@@ -6,7 +6,7 @@
 /*   By: eganas <eganas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 17:26:51 by eganas            #+#    #+#             */
-/*   Updated: 2026/04/13 23:13:47 by eganas           ###   ########.fr       */
+/*   Updated: 2026/04/19 14:25:48 by eganas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,9 @@ std::string Animal::getType() const
 void Animal::setType(std::string type)
 {
 	this->_type = type;
+}
+
+void Animal::displayIdeas() const
+{
+	std::cout << "Animal has no ideas" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: eganas <eganas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/05 12:38:20 by eganas            #+#    #+#             */
-/*   Updated: 2026/04/13 23:27:18 by eganas           ###   ########.fr       */
+/*   Updated: 2026/04/19 14:30:19 by eganas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int main( void ) {
 	
 	std::cout << "__________Casual Test__________" << std::endl << std::endl;
 
-	// const Animal* animal = new Animal();
 	const Animal* dog = new Dog();
 	const Animal* cat = new Cat();
 	
@@ -36,10 +35,45 @@ int main( void ) {
 	}
 
 	for (int i = 0; i < nbAnimals; i++)
-	{
-		std::cout << "Type of Animal: " + aShelter[i]->getType() << std::endl;
 		aShelter[i]->makeSound();
+
+	std::cout << "__________Brain Test__________" << std::endl << std::endl;
+
+	std::cout << "_____Dog Test_____" << std::endl << std::endl;
+	
+		Dog guard;
+	
+		std::cout << std::endl;	
+		guard.getBrain()->setIdea(0, "Guard");
+	
+	{
+		Dog dcopy = guard;
+		dcopy.getBrain()->setIdea(0, "Protection");
+		
+		std::cout << std::endl;
+		guard.displayIdeas();
+		dcopy.displayIdeas();
 	}
+	
+	std::cout << std::endl;	
+	std::cout << "_____Cat Test_____" << std::endl << std::endl;
+
+		Cat sleepy;
+	
+		std::cout << std::endl;	
+		sleepy.getBrain()->setIdea(0, "Sleep");
+	{
+		Cat ccopy = sleepy;
+		ccopy.getBrain()->setIdea(0, "Tired");
+		
+		std::cout << std::endl;
+		sleepy.displayIdeas();
+		ccopy.displayIdeas();
+	}
+
+	// std::cout << "__________Abstract Test__________" << std::endl << std::endl;
+
+	// Animal abstract;
 
 	std::cout << "__________Destructors__________" << std::endl << std::endl;
 
@@ -47,6 +81,5 @@ int main( void ) {
 		delete aShelter[i];
 	delete dog;
 	delete cat;
-	// delete animal;
 	return 0;
 }

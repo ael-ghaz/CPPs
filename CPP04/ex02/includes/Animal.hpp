@@ -6,7 +6,7 @@
 /*   By: eganas <eganas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 17:23:08 by eganas            #+#    #+#             */
-/*   Updated: 2026/04/13 23:13:44 by eganas           ###   ########.fr       */
+/*   Updated: 2026/04/19 14:28:34 by eganas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ public:
 	std::string getType() const;
 	void setType(std::string type);
 	virtual void makeSound() const = 0;
+	virtual void displayIdeas() const;
 };
 
 #endif

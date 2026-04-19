@@ -6,7 +6,7 @@
 /*   By: eganas <eganas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 18:36:30 by eganas            #+#    #+#             */
-/*   Updated: 2026/04/13 21:41:30 by eganas           ###   ########.fr       */
+/*   Updated: 2026/04/19 13:25:38 by eganas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ Cat::Cat() : _catBrain(new Brain())
 		<< "Cat : Default constructor called!" 
 		<< "   ***" << std::endl;
 	this->_type = "Cat";
+	for (int i = 0; i < TEST; i++)
+		this->_catBrain->setIdea(i, "Fish");
 }
 
 Cat::Cat(Cat const &cat) : Animal(cat), _catBrain(new Brain(*cat._catBrain))
@@ -53,4 +55,20 @@ Cat::~Cat()
 void Cat::makeSound() const
 {
 	std::cout << "Cat: Meow Meow !" << std::endl;
+}
+
+void Cat::displayIdeas() const
+{
+	for (int i = 0; i < IDEAS; i++)
+	{
+		if (this->_catBrain->getIdea(i).empty())
+			break;
+		std::cout << "Idea n°" << i << ": " << this->_catBrain->getIdea(i) << std::endl;
+	}
+	std::cout << std::endl;
+}
+
+Brain *Cat::getBrain() const
+{
+	return (this->_catBrain);
 }
