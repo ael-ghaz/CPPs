@@ -6,7 +6,7 @@
 /*   By: eganas <eganas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 17:26:51 by eganas            #+#    #+#             */
-/*   Updated: 2026/04/13 21:09:49 by eganas           ###   ########.fr       */
+/*   Updated: 2026/04/19 13:17:31 by eganas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,9 @@ void Animal::setType(std::string type)
 void Animal::makeSound() const
 {
 	std::cout << "Animal: Censored voice !" << std::endl;
+}
+
+void Animal::displayIdeas() const
+{
+	std::cout << "Animal has no ideas" << std::endl;
 }

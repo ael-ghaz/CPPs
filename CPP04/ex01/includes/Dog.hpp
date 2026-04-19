@@ -6,7 +6,7 @@
 /*   By: eganas <eganas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 18:10:04 by eganas            #+#    #+#             */
-/*   Updated: 2026/04/13 21:41:48 by eganas           ###   ########.fr       */
+/*   Updated: 2026/04/19 13:14:36 by eganas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ public:
 	~Dog();
 	
 	void makeSound() const;
+	void displayIdeas() const;
+	Brain *getBrain() const;
 };
 
 #endif
