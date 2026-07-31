@@ -6,18 +6,18 @@
 #    By: eganas <eganas@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/13 15:55:45 by eganas            #+#    #+#              #
-#    Updated: 2026/04/13 19:45:32 by eganas           ###   ########.fr        #
+#    Updated: 2026/07/31 20:06:07 by eganas           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++ -g
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-NAME = animal
+NAME = bureaucrat
 REMOVE = rm -rf
 DIR_SRC = src/
 INC = -I includes
 
-SRC1 = main.cpp Bureaucrat.cpp
+SRC1 = main.cpp Bureaucrat.cpp Form.cpp
 
 SRC = $(addprefix $(DIR_SRC), $(SRC1))
 OBJ = $(SRC:.cpp=.o)
