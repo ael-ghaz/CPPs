@@ -6,7 +6,7 @@
 #    By: eganas <eganas@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/13 15:55:45 by eganas            #+#    #+#              #
-#    Updated: 2026/08/09 19:28:00 by eganas           ###   ########.fr        #
+#    Updated: 2026/08/10 16:56:36 by eganas           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,9 @@ REMOVE = rm -rf
 DIR_SRC = src/
 INC = -I includes
 
-SRC1 = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
+SRC1 = main.cpp Bureaucrat.cpp AForm.cpp \
+ 		ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp \
+		Intern.cpp
 
 SRC = $(addprefix $(DIR_SRC), $(SRC1))
 OBJ = $(SRC:.cpp=.o)

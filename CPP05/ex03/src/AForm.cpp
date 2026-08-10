@@ -6,7 +6,7 @@
 /*   By: eganas <eganas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/31 11:05:41 by eganas            #+#    #+#             */
-/*   Updated: 2026/08/08 17:07:33 by eganas           ###   ########.fr       */
+/*   Updated: 2026/08/10 15:05:55 by eganas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ AForm::AForm(std::string const name, int const gradeToSign, int const gradeToExe
 		throw GradeTooHighException();
 	if (gradeToSign > LOWEST_GRADE || gradeToExecute > LOWEST_GRADE)
 		throw GradeTooLowException();
-	}
+}
 
 AForm::AForm(AForm const &form)
 	: _name(form._name), _isSigned(form._isSigned), _gradeToSign(form._gradeToSign), _gradeToExecute(form._gradeToExecute)
