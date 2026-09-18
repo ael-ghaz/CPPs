@@ -18,4 +18,6 @@ int main(int argc, char **argv)
 		std::cerr << "Error: Wrong number of arguments";
 	else
 		ScalarConverter::convert(argv[1]);
+
+	return 0;
 }

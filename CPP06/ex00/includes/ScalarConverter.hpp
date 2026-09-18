@@ -16,6 +16,7 @@
 #include <iostream>
 #include <sstream>
 #include <iomanip>
+#include <cmath>
 
 class ScalarConverter {
 	ScalarConverter();
@@ -29,7 +30,8 @@ public:
 		INT,
 		FLOAT,
 		DOUBLE,
-		IMPOSSIBLE
+		IMPOSSIBLE,
+		SPECIAL
 	};
 
 	static void convert(std::string const literal);
@@ -40,6 +42,9 @@ public:
 	static void convertInt(std::string const literal);
 	static void convertFloat(std::string const literal);
 	static void convertDouble(std::string const literal);
+
+	static void printSpecial(std::string const literal);
 };
+
 
 #endif
