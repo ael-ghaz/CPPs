@@ -31,24 +31,24 @@ int main()
 
 	try
 	{
-		Array<double> defOriginal(5);
+		Array<double> arrOriginal(5);
 
-		for (unsigned int i = 0; i < defOriginal.size() ; ++i)
-			defOriginal[i] = i;
+		for (unsigned int i = 0; i < arrOriginal.size() ; ++i)
+			arrOriginal[i] = i;
 
-		Array<double> defCopy(defOriginal);
+		Array<double> arrCopy(arrOriginal);
 
-		for (unsigned int i = 0; i < defCopy.size() ; ++i)
-			std::cout << "Copy [" << defCopy[i] << ":" 
-			<< defOriginal[i] << "] Original" << std::endl;
+		for (unsigned int i = 0; i < arrCopy.size() ; ++i)
+			std::cout << "Copy [" << arrCopy[i] << ":" 
+			<< arrOriginal[i] << "] Original" << std::endl;
 
 		std::cout << std::endl << "Changing value of the copy :" << std::endl;
-		for (unsigned int i = 0; i < defCopy.size() ; ++i)
-			defCopy[i] += 0.5;
+		for (unsigned int i = 0; i < arrCopy.size() ; ++i)
+			arrCopy[i] += 0.5;
 
-		for (unsigned int i = 0; i < defCopy.size() ; ++i)
-			std::cout << "Copy [" << defCopy[i] << ":" 
-			<< defOriginal[i] << "] Original" << std::endl;
+		for (unsigned int i = 0; i < arrCopy.size() ; ++i)
+			std::cout << "Copy [" << arrCopy[i] << ":" 
+			<< arrOriginal[i] << "] Original" << std::endl;
 
 	}
 	catch (std::exception &e) {
@@ -59,18 +59,39 @@ int main()
 
 	try
 	{
-		Array<int> defOrigin(5);
-		Array<int> defAssign;
+		Array<int> arrOrigin(5);
+		Array<int> arrAssign;
 
-		for (unsigned int i = 0; i < defOrigin.size() ; ++i)
-			defOrigin[i] = i;
+		for (unsigned int i = 0; i < arrOrigin.size() ; ++i)
+			arrOrigin[i] = i;
 
-		defAssign = defOrigin;
+		arrAssign = arrOrigin;
 
-		for (unsigned int i = 0; i < defAssign.size() ; ++i)
-			std::cout << "Assign [" << defAssign[i] << ":" 
-			<< defOrigin[i] << "] Origin" << std::endl;
+		for (unsigned int i = 0; i < arrAssign.size() ; ++i)
+			std::cout << "Assign [" << arrAssign[i] << ":" 
+			<< arrOrigin[i] << "] Origin" << std::endl;
 
+	}
+	catch (std::exception &e) {
+		std::cerr << e.what() << std::endl;
+	}
+
+	std::cout << std::endl << "__________TEST CONST__________" << std::endl << std::endl;
+
+	try
+	{
+		Array<int> arrTest(1);
+
+		arrTest[0] = 42;
+
+		Array<int> const arrConst(arrTest);
+		std::cout << "Const [" << arrConst[0] << ":";
+		// arrConst[0] = 5;
+		std::cout << arrConst[0] << "]" << std::endl;
+
+		std::cout << std::endl << "SIZE:" << std::endl;
+		std::cout << "Test [" << arrTest.size() << ":" 
+			<< arrConst.size() << "] Const" << std::endl;
 	}
 	catch (std::exception &e) {
 		std::cerr << e.what() << std::endl;
