@@ -13,7 +13,7 @@ void swap(T &a, T &b)
 }
 
 template<typename T>
-T min(T const &a, T const &b)
+T const &min(T const &a, T const &b)
 {
 	if (a < b)
 		return a;
@@ -21,7 +21,7 @@ T min(T const &a, T const &b)
 }
 
 template<typename T>
-T max(T const &a, T const &b)
+T const &max(T const &a, T const &b)
 {
 	if (a > b)
 		return a;

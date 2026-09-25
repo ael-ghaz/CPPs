@@ -17,5 +17,12 @@ int main( void ) {
 	std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
 	std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
 
+	int e = 3;
+	std::cout << "e = " << e << ", a = " << a << std::endl;
+
+	int const & res = ::min( e, a );
+	std::cout << "Adress a:   " << &a << std::endl;
+	std::cout << "Adress res: " << &res << std::endl;
+
 	return 0;
 }
