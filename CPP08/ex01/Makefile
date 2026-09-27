@@ -6,13 +6,13 @@
 #    By: eganas <eganas@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/13 15:55:45 by eganas            #+#    #+#              #
-#    Updated: 2026/09/20 18:00:47 by eganas           ###   ########.fr        #
+#    Updated: 2026/09/27 17:10:27 by eganas           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++ -g
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-NAME = array
+NAME = span
 REMOVE = rm -rf
 DIR_SRC = src/
 INC = -I includes

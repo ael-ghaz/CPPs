@@ -3,33 +3,37 @@
 
 #include <iostream>
 #include <exception>
+#include <vector>
+#include <algorithm>
 
 class Span
 {
 private:
-	int *tab;
-	unsigned int _n
+	unsigned int _n;
+	std::vector<int> _v;
+
+	Span();
+	Span(Span const &other);
 
 public:
-	Span() = delete;
-	Span(Span const &other) = delete;
 
 	Span(unsigned int const n);
 	Span &operator=(Span const &other);
 	~Span();
 
 	void addNumber(int const nb);
+	void addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end);
 
 	int shortestSpan() const;
 	int longestSpan() const;
 
-	class StoreFullException : std::exception
+	class ContainerFullException : public std::exception
 	{
 		public:
 			virtual const char *what() const throw();
 	};
 
-	class MissingDataException : std::exception
+	class MissingDataException : public std::exception
 	{
 		public:
 			virtual const char *what() const throw();
