@@ -12,7 +12,7 @@
 
 CC = c++ -g
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-NAME = array
+NAME = stack
 REMOVE = rm -rf
 DIR_SRC = src/
 INC = -I includes
