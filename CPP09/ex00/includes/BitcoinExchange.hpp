@@ -3,6 +3,9 @@
 
 #include <iostream>
 #include <map>
+#include <fstream>
+#include <exception>
+#include <sstream>
 
 class BitcoinExchange 
 {
@@ -16,7 +19,31 @@ public:
 	BitcoinExchange &operator=(BitcoinExchange const &other);
 	~BitcoinExchange();
 
-	BitcoinMap getDatas() const;
-}
+	void parseDataBase();
+	void execBtcInfo(char *fileName);
+	bool isValidDate(std::string date) const;
+
+	void displayResMultipliedValue(std::string date, double value);
+
+	class CouldNotOpenFileException : public std::exception
+	{
+		virtual const char *what() const throw();
+	};
+
+	class InvalidColumnFormatException : public std::exception
+	{
+		virtual const char *what() const throw();
+	};
+
+	class InvalidPriceFormatException : public std::exception
+	{
+		virtual const char *what() const throw();
+	};
+
+	class InvalidDateFormatException : public std::exception
+	{
+		virtual const char *what() const throw();
+	};
+};
 
 #endif

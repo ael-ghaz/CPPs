@@ -6,7 +6,7 @@
 #    By: eganas <eganas@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/13 15:55:45 by eganas            #+#    #+#              #
-#    Updated: 2026/09/20 18:00:47 by eganas           ###   ########.fr        #
+#    Updated: 2026/10/02 10:16:05 by eganas           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ REMOVE = rm -rf
 DIR_SRC = src/
 INC = -I includes
 
-SRC1 = main.cpp
+SRC1 = main.cpp BitcoinExchange.cpp
 
 SRC = $(addprefix $(DIR_SRC), $(SRC1))
 OBJ = $(SRC:.cpp=.o)
