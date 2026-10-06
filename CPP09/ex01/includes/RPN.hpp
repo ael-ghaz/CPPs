@@ -3,12 +3,13 @@
 
 #include <iostream>
 #include <stack>
+#include <list>
 #include <sstream>
 
 class RPN
 {
 private:
-	std::stack<double> _store;
+	std::stack<double, std::list<double> > _store;
 
 public:
 	RPN();
