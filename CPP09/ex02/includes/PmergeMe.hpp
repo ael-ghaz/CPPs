@@ -22,6 +22,17 @@ public:
 	~PmergeMe();
 
 	bool parseInput(int argc, char **argv);
+
+	template <typename T>
+	T fordJohnsonSort(T container);
 };
+
+template <typename T>
+T PmergeMe::fordJohnsonSort(T container)
+{
+	
+
+	return container;
+}
 
 #endif
