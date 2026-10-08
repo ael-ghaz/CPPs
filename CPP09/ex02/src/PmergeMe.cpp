@@ -63,3 +63,23 @@ bool PmergeMe::parseInput(int argc, char **argv)
 	}
 	return true;
 }
+
+void PmergeMe::runFirstCtn()
+{
+	_v = fordJohnsonSort(_v);
+}
+
+void PmergeMe::runSecondCtn()
+{
+	_d = fordJohnsonSort(_d);
+}
+
+std::vector<int> PmergeMe::getV() const
+{
+	return _v;
+}
+
+std::deque<int> PmergeMe::getD() const
+{
+	return _d;
+}
