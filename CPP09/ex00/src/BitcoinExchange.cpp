@@ -71,7 +71,7 @@ double stringToDouble(std::string const &valueStr)
 
 	if (!(ssVal >> value))
 	{
-		std::cerr << "Error: bad value input => " << value << std::endl;
+		std::cerr << "Error: bad value input => " << valueStr << std::endl;
 		return -1;
 	}
 
