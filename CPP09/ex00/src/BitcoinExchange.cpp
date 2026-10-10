@@ -61,6 +61,25 @@ bool BitcoinExchange::isValidDate(std::string date) const
 	if ((date[8] == '3' && date[9] > '1') || date[8] > '3')
 		return false;
 
+	int year = std::atoi(date.substr(0, 4).c_str());
+	int month = std::atoi(date.substr(5, 2).c_str());
+	int day = std::atoi(date.substr(8, 2).c_str());
+
+	int maxDays = 31;
+
+	if (month == 4 || month == 6 || month == 9 || month == 11)
+		maxDays = 30;
+	else if (month == 2)
+	{
+		if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0))
+			maxDays = 29;
+		else
+			maxDays = 28;
+	}
+
+	if (day > maxDays)
+		return false;
+
 	return true;
 }
 
